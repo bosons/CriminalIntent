@@ -12,6 +12,7 @@ public class Crime {
     private Date mDate;
     private boolean mSolved;
     private int mIndex;
+    private String mSuspect;
 
     public Date getDate() {
         return mDate;
@@ -48,6 +49,15 @@ public class Crime {
     public void setIndex(int index) {
         mIndex = index;
     }
+
+    public String getSuspect() {
+        return mSuspect;
+    }
+
+    public void setSuspect(String suspect) {
+        mSuspect = suspect;
+    }
+
 
     public Crime() {
 
