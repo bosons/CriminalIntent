@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/pre-dexed/debug/classes-1d60b43c063577fe4bf5072bd520d5fcce962bff.jar" />
+    </item>
+    <item
+        jar="/Users/xyang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-94600c3ec086c07a025e441da6ffbfd1bd64d5f9.jar" />
+    </item>
+    <item
+        jar="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/pre-dexed/debug/classes-ca8df72f1a9225e975b4f0da03ad841f06b08f9a.jar" />
+    </item>
+    <item
+        jar="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-ae02ab72470ca47df1d0cc8d8775b10c3c95e1e0.jar" />
+    </item>
+    <item
+        jar="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/xyang/AndroidStudioProjects/CriminalIntent2/app/build/intermediates/pre-dexed/debug/classes-8ea0c763962b24c18e9cf20b7594a7e9719f03d4.jar" />
+    </item>
+
+</items>
