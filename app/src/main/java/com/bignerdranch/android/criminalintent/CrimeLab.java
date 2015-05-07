@@ -5,12 +5,14 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Environment;
 import android.util.Log;
 
 import com.bignerdranch.android.criminalintent.database.CrimeBaseHelper;
 import com.bignerdranch.android.criminalintent.database.CrimeCursorWrapper;
 import com.bignerdranch.android.criminalintent.database.CrimeDbSchema;
 
+import java.io.File;
 import java.util.*;
 
 import static com.bignerdranch.android.criminalintent.database.CrimeDbSchema.CrimeTable;
@@ -21,8 +23,9 @@ import static com.bignerdranch.android.criminalintent.database.CrimeDbSchema.Cri
 public class CrimeLab {
     private static CrimeLab sCrimeLab;
     private List<Crime> mCrimes;
-
+    private Context mContext;
     private final SQLiteDatabase mDatabase;
+
 
     public static CrimeLab get(Context context) {
         if(sCrimeLab == null) {
@@ -34,6 +37,7 @@ public class CrimeLab {
     private CrimeLab(Context context) {
         mDatabase = new CrimeBaseHelper(context).getWritableDatabase();
         mCrimes = new ArrayList<Crime>();
+        mContext = context;
         for(int i =0; i< 0; i++) {
             Crime crime = new Crime();
             crime.setTitle("Crime#"+i);
@@ -70,6 +74,13 @@ public class CrimeLab {
             }
         }
         return null;
+    }
+    public File getPhotoFile(Crime crime) {
+        File externalFileDir = mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        if(externalFileDir == null) {
+            return null;
+        }
+        return new File(externalFileDir, crime.getPhotoFileName());
     }
 
     public void addCrime(Crime crime) {
