@@ -13,11 +13,11 @@ import java.util.UUID;
 /**
  * Created by xyang on 5/7/15.
  */
-public class DialogActivity extends ActionBarActivity {
+public class FullScreenPhotoActivity extends ActionBarActivity {
     private static final String EXTRA_CRIME_ID = "crime_id";
 
     public static Intent newIntent(Context context, UUID crimeId){
-        Intent intent = new Intent(context,DialogActivity.class);
+        Intent intent = new Intent(context,FullScreenPhotoActivity.class);
         intent.putExtra(EXTRA_CRIME_ID, crimeId);
         return intent;
     }
@@ -33,7 +33,7 @@ public class DialogActivity extends ActionBarActivity {
         if(fragment == null) {
             Log.i("Eric", "Fragment is null at Dialog Activity call");
             UUID crimeId = (UUID)getIntent().getSerializableExtra(EXTRA_CRIME_ID);
-            fragment = com.bignerdranch.android.criminalintent.DialogFragment.newInstance(crimeId);
+            fragment = FullScreenPhotoFragment.newInstance(crimeId);
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
     }

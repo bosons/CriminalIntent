@@ -22,7 +22,7 @@
             android:label="@string/app_name">
         </activity>
 
-        <activity android:name=".DialogActivity">
+        <activity android:name=".FullScreenPhotoActivity">
         </activity>
     </application>
 

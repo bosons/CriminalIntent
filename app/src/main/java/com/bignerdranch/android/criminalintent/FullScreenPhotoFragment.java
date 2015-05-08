@@ -16,15 +16,15 @@ import java.util.UUID;
 /**
  * Created by xyang on 5/7/15.
  */
-public class DialogFragment extends Fragment {
+public class FullScreenPhotoFragment extends Fragment {
     private static final String ARG_CRIME_ID = "crime_id";
     private File mPhotoFile;
     private ImageView mPhotoView;
 
-    public static DialogFragment newInstance(UUID crime_id) {
+    public static FullScreenPhotoFragment newInstance(UUID crime_id) {
         Bundle args = new Bundle();
         args.putSerializable(ARG_CRIME_ID, crime_id);
-        DialogFragment fragment = new DialogFragment();
+        FullScreenPhotoFragment fragment = new FullScreenPhotoFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,7 +34,6 @@ public class DialogFragment extends Fragment {
         super.onCreate(savedInstanceState);
         UUID crime_id = (UUID)getArguments().getSerializable(ARG_CRIME_ID);
         Crime crime= CrimeLab.get(getActivity()).getCrime(crime_id);
-        Log.i("Eric", "DialogFragment onCreate with crime_id" + crime_id.toString());
         mPhotoFile = CrimeLab.get(getActivity()).getPhotoFile(crime);
     }
 
@@ -44,7 +43,7 @@ public class DialogFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_dialog, container, false);
         mPhotoView = (ImageView)v.findViewById(R.id.full_screen_crime_photo);
         //inflate mPhotoView
-        Log.i("Eric", "DialogFragment onCreateView");
+
         if(mPhotoFile == null || !mPhotoFile.exists()){
             mPhotoView.setImageDrawable(null);
         } else {

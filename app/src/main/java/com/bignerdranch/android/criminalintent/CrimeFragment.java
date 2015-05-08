@@ -182,14 +182,8 @@ public class CrimeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Intent intent = CrimePagerActivity.newIntent(getActivity(), mCrime.getId());
-                Intent intent = DialogActivity.newIntent(getActivity(), mCrime.getId());
+                Intent intent = FullScreenPhotoActivity.newIntent(getActivity(), mCrime.getId());
                 startActivity(intent);
-                /*
-                Intent intent = CrimePagerActivity.newIntent(getActivity(), mCrime.getId());
-                DialogFragment dialogFragment = DialogFragment.newInstance(mCrime.getId());
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.activity_crime_pager_view_pager,dialogFragment).commit();
-                        */
             }
         });
 
