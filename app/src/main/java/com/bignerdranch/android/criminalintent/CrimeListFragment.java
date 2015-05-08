@@ -198,7 +198,7 @@ public class CrimeListFragment extends Fragment {
         //String subtitle = getString(R.string.subtitle_format, crimeLab.getCrimes().size());
         int crimeSize = crimeLab.getCrimes().size();
         String subtitle = getResources().getQuantityString(R.plurals.subtitle_plural, crimeSize, crimeSize);
-        if(mSubtitleVisible == false) {
+        if(!mSubtitleVisible) {
             subtitle = null;
         }
         ActionBarActivity activity = (ActionBarActivity)getActivity();

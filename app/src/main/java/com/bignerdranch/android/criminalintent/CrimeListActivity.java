@@ -15,6 +15,7 @@ public class CrimeListActivity extends SingleFragmentActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        
         Log.i("Eric", "CrimeListActivity onDestroy");
     }
 }
