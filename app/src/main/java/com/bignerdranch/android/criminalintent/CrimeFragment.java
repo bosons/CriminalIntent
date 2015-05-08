@@ -49,7 +49,7 @@ public class CrimeFragment extends Fragment {
     private ImageView mPhotoView;
     private File mPhotoFile;
 
-    public static final String ARG_CRIME_ID = "crime_id";
+    private static final String ARG_CRIME_ID = "crime_id";
     private static final String DIALOG_DATE = "dialog_date";
     private static final String DIALOG_TIME = "dialog_time";
     private static final int REQUEST_DATE = 0;

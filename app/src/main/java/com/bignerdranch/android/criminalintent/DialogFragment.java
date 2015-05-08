@@ -17,12 +17,13 @@ import java.util.UUID;
  * Created by xyang on 5/7/15.
  */
 public class DialogFragment extends Fragment {
+    private static final String ARG_CRIME_ID = "crime_id";
     private File mPhotoFile;
     private ImageView mPhotoView;
 
     public static DialogFragment newInstance(UUID crime_id) {
         Bundle args = new Bundle();
-        args.putSerializable(CrimeFragment.ARG_CRIME_ID, crime_id);
+        args.putSerializable(ARG_CRIME_ID, crime_id);
         DialogFragment fragment = new DialogFragment();
         fragment.setArguments(args);
         return fragment;
@@ -31,7 +32,7 @@ public class DialogFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        UUID crime_id = (UUID)getArguments().getSerializable(CrimeFragment.ARG_CRIME_ID);
+        UUID crime_id = (UUID)getArguments().getSerializable(ARG_CRIME_ID);
         Crime crime= CrimeLab.get(getActivity()).getCrime(crime_id);
         Log.i("Eric", "DialogFragment onCreate with crime_id" + crime_id.toString());
         mPhotoFile = CrimeLab.get(getActivity()).getPhotoFile(crime);

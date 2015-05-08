@@ -18,7 +18,7 @@ import java.util.*;
 public class CrimePagerActivity extends ActionBarActivity {
     private ViewPager mViewPager;
     private List<Crime> mCrimes;
-    public static final String EXTRA_CRIME_ID = "crime_id";
+    private static final String EXTRA_CRIME_ID = "crime_id";
 
     public static Intent newIntent(Context context, UUID crimeId){
         Intent intent = new Intent(context,CrimePagerActivity.class);
